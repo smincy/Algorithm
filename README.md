@@ -1,2 +1,3 @@
-# Algorithm
+## ⚡ Algorithm
 algorithm Study
+- Java
