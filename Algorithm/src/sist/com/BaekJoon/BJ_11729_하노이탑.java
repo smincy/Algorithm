@@ -3,7 +3,6 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// https://st-lab.tistory.com/96
 // 재귀
 
 public class BJ_11729_하노이탑 {
