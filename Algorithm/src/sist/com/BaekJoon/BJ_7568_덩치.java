@@ -1,13 +1,13 @@
 package sist.com.BaekJoon;
 
-// ºê·çÆ®Æ÷½º ¾Ë°í¸®Áò
+//ë¸Œë£¨íŠ¸í¬ìŠ¤ ì•Œê³ ë¦¬ì¦˜
 
-// StringBuilder ·Î ¸¸µå´Â°Ô ´õ È¿À²ÀûÀÏµí
+//StringBuilder ë¡œ ë§Œë“œëŠ”ê²Œ ë” íš¨ìœ¨ì ì¼ë“¯
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BJ_7568_µ¢Ä¡ {
+public class BJ_7568_ë©ì¹˜ {
 	public static int N;
 	
 	public static void main(String[] args) throws Exception {
@@ -24,7 +24,7 @@ public class BJ_7568_µ¢Ä¡ {
 			body[i][1] = Integer.parseInt(tmp[1]);
 		}
 
-		BJ_7568_µ¢Ä¡ s = new BJ_7568_µ¢Ä¡();
+		BJ_7568_ë©ì¹˜ s = new BJ_7568_ë©ì¹˜();
 
 		s.rank(body);
 	}
@@ -34,13 +34,13 @@ public class BJ_7568_µ¢Ä¡ {
 		for (int i = 0; i < N; i++) {
 			int rnk = 1;
 			for (int j = 0; j < N; j++) {
-				// i¹øÂ° j¹øÂ° »ç¶÷ °°Àº °æ¿ì´Â ÆĞ½º
+				// ië²ˆì§¸ jë²ˆì§¸ ì‚¬ëŒ ê°™ì€ ê²½ìš°ëŠ” íŒ¨ìŠ¤
 				if (i == j) {
 					continue;
 				}
 				if (a[i][0] < a[j][0] && a[i][1] < a[j][1]) {
-					// i¹øÂ° »ç¶÷°ú j¹øÂ° »ç¶÷ÀÇ ¸ö¹«°Ô ºñ±³ && Å° ºñ±³
-					// i¹øÂ° »ç¶÷º¸´Ù Å« »ç¶÷ÀÌ ÀÖÀ¸¸é ¼øÀ§´Â +1
+					// ië²ˆì§¸ ì‚¬ëŒê³¼ jë²ˆì§¸ ì‚¬ëŒì˜ ëª¸ë¬´ê²Œ ë¹„êµ && í‚¤ ë¹„êµ
+					// ië²ˆì§¸ ì‚¬ëŒë³´ë‹¤ í° ì‚¬ëŒì´ ìˆìœ¼ë©´ ìˆœìœ„ëŠ” +1
 					rnk++;
 				}
 			}

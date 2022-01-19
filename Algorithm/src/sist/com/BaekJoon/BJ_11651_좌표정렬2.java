@@ -5,13 +5,13 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-// Á¤·Ä / new Comparator<int[]> »ç¿ë¹æ¹ý °øºÎÇÊ¿ä(22.01.02)
+// // ì •ë ¬ / new Comparator<int[]> ì‚¬ìš©ë°©ë²• ê³µë¶€í•„ìš”(22.01.02)
 
-public class BJ_11651_ÁÂÇ¥Á¤·Ä2 {
+public class BJ_11651_ì¢Œí‘œì •ë ¬2 {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		BJ_11651_ÁÂÇ¥Á¤·Ä2 s = new BJ_11651_ÁÂÇ¥Á¤·Ä2();
+		BJ_11651_ì¢Œí‘œì •ë ¬2 s = new BJ_11651_ì¢Œí‘œì •ë ¬2();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

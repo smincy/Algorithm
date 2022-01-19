@@ -3,15 +3,15 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// ¹éÆ®·¹Å·
+// ë°±íŠ¸ë ˆí‚¹
 
-public class BJ_15650_N°úM2 {
+public class BJ_15650_Nê³¼M2 {
 	public static int N, M;
 	public static StringBuilder sb = new StringBuilder();
 	public static int[] arr;
 
 	public static void main(String[] args) throws Exception {
-		BJ_15650_N°úM2 s = new BJ_15650_N°úM2();
+		BJ_15650_Nê³¼M2 s = new BJ_15650_Nê³¼M2();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] tmp = br.readLine().split(" ");
@@ -26,7 +26,7 @@ public class BJ_15650_N°úM2 {
 		System.out.println(sb);
 	}
 
-	public void dfs(int a, int dep) { // a ´Â ¾îµğ¼­ ºÎÅÍ ½ÃÀÛÇÏ´ÂÁö, 1ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î
+	public void dfs(int a, int dep) { // a ëŠ” ì–´ë””ì„œ ë¶€í„° ì‹œì‘í•˜ëŠ”ì§€, 1ë¶€í„° ì‹œì‘í•˜ë¯€ë¡œ
 		if (dep == M) {
 			for (int i : arr) {
 				sb.append(i).append(" ");
@@ -37,8 +37,8 @@ public class BJ_15650_N°úM2 {
 
 		for (int i = a; i <= N; i++) {
 			arr[dep] = i;
-			dfs(i + 1, dep + 1);	// ´ÙÀ½Å½»ö±¸°£Àº Å½»ö½ÃÀÛµµ 1 Áõ°¡ÇØ¾ßÇÏ¹Ç·Î
-								// ±×³É i ·Î ÇÒ °æ¿ì 1 1 , 2 2 ÀÚ½Å°ú °°Àº À§Ä¡µµ Å½»ö 
+			dfs(i + 1, dep + 1);	// ë‹¤ìŒíƒìƒ‰êµ¬ê°„ì€ íƒìƒ‰ì‹œì‘ë„ 1 ì¦ê°€í•´ì•¼í•˜ë¯€ë¡œ
+						// ê·¸ëƒ¥ i ë¡œ í•  ê²½ìš° 1 1 , 2 2 ìì‹ ê³¼ ê°™ì€ ìœ„ì¹˜ë„ íƒìƒ‰ 
 		}
 	}
 }

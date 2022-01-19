@@ -3,19 +3,19 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// ¹éÆ®·¡Å·
+// ë°±íŠ¸ë˜í‚¹
 
-public class BJ_15649_N°úM1 {
-	// ¹æ¹® È®ÀÎ ¹è¿­
+public class BJ_15649_Nê³¼M1 {
+	// ë°©ë¬¸ í™•ì¸ ë°°ì—´
 	public static boolean[] vis;
-	// Ãâ·Â¿ë ¹è¿­
+	// ì¶œë ¥ìš© ë°°ì—´
 	public static int[] arr;
 
 	public static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
 
-		BJ_15649_N°úM1 s = new BJ_15649_N°úM1();
+		BJ_15649_Nê³¼M1 s = new BJ_15649_Nê³¼M1();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -24,7 +24,7 @@ public class BJ_15649_N°úM1 {
 		int N = Integer.parseInt(tmp[0]);
 		int M = Integer.parseInt(tmp[1]);
 
-		// 1ºÎÅÍ N ±îÁö Áßº¹¾øÀÌ M °³¸¦ °í¸¥ ¼ö¿­
+		// 1ë¶€í„° N ê¹Œì§€ ì¤‘ë³µì—†ì´ M ê°œë¥¼ ê³ ë¥¸ ìˆ˜ì—´
 
 		vis = new boolean[N];
 
@@ -36,7 +36,7 @@ public class BJ_15649_N°úM1 {
 
 	}
 
-	public void dfs(int N, int M, int dep) { // dep : ±íÀÌ
+	public void dfs(int N, int M, int dep) {  // dep : ê¹Šì´
 		if (dep == M) {
 			for (int i : arr) {
 				sb.append(i).append(" ");
@@ -45,17 +45,17 @@ public class BJ_15649_N°úM1 {
 			return;
 		}
 
-		for (int i = 0; i < N; i++) { // 0 ºÎÅÍ N ±îÁö È®ÀÎ
+		for (int i = 0; i < N; i++) { // 0 ë¶€í„° N ê¹Œì§€ í™•ì¸
 
-			// ¹æ¹®ÇÏÁö ¾ÊÀº °÷ÀÌ¶ó¸é?
+			// ë°©ë¬¸í•˜ì§€ ì•Šì€ ê³³ì´ë¼ë©´?
 			if (vis[i] == false) {
-				// ¹æ¹®Ã³¸®
+				// ë°©ë¬¸ì²˜ë¦¬
 				vis[i] = true;
-				// ±íÀÌ¸¦ index·Î »ç¿ëÇØ¼­ Ãâ·Â¹è¿­¿¡ ÀÔ·Â
+				// ê¹Šì´ë¥¼ indexë¡œ ì‚¬ìš©í•´ì„œ ì¶œë ¥ë°°ì—´ì— ì…ë ¥
 				arr[dep] = i + 1;
-				// ´ÙÀ½ ±íÀÌ Àç±ÍÈ£Ãâ
+				// ë‹¤ìŒ ê¹Šì´ ì¬ê·€í˜¸ì¶œ
 				dfs(N, M, dep + 1);
-				// Àç±Í¿¡¼­ µ¹¾Æ¿Â ÈÄ¿¡´Â ¹æ¹®³ëµå false Ã³¸®
+				// ì¬ê·€ì—ì„œ ëŒì•„ì˜¨ í›„ì—ëŠ” ë°©ë¬¸ë…¸ë“œ false ì²˜ë¦¬
 				vis[i] = false;
 			}
 		}

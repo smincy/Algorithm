@@ -1,18 +1,18 @@
 package sist.com.BaekJoon;
-// 3ÁÙ ºù°í½Ã °ÔÀÓ³¡
+//3ì¤„ ë¹™ê³ ì‹œ ê²Œì„ë
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ_2578_ºù°í {
+public class BJ_2578_ë¹™ê³  {
 	public static int Map[][] = new int[5][5];
 	public static int bingCnt = 0;
 
 	public static void main(String[] args) throws Exception {
-		BJ_2578_ºù°í s = new BJ_2578_ºù°í();
+		BJ_2578_ë¹™ê³  s = new BJ_2578_ë¹™ê³ ();
 
-		int num[] = new int[25]; // »çÈ¸ÀÚ°¡ ºÎ¸£´Â ¼ıÀÚ
+		int num[] = new int[25]; // ì‚¬íšŒìê°€ ë¶€ë¥´ëŠ” ìˆ«ì
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -68,7 +68,7 @@ public class BJ_2578_ºù°í {
 					tmp++;
 				}
 			}
-			if (tmp == 5) { // Çà°Ë»ç
+			if (tmp == 5) { // í–‰ê²€ì‚¬
 				++bingCnt;
 			}
 			tmp = 0;
@@ -78,7 +78,7 @@ public class BJ_2578_ºù°í {
 					tmp++;
 				}
 			}
-			if (tmp == 5) { // ¿­°Ë»ç
+			if (tmp == 5) { // ì—´ê²€ì‚¬
 				++bingCnt;
 			}
 			tmp = 0;

@@ -1,9 +1,9 @@
 package sist.com.BaekJoon;
-// È¥ÀÚÇ®±â
+// í˜¼ìí’€ê¸°
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BJ_15649_N°úM1_2 {
+public class BJ_15649_Nê³¼M1_2{
 
 	public static int N, M;
 	public static StringBuilder sb = new StringBuilder();
@@ -12,7 +12,7 @@ public class BJ_15649_N°úM1_2 {
 
 	public static void main(String[] args) throws Exception {
 
-		BJ_15649_N°úM1_2 s = new BJ_15649_N°úM1_2();
+		BJ_15649_Nê³¼M1_2 s = new BJ_15649_Nê³¼M1_2();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -38,11 +38,11 @@ public class BJ_15649_N°úM1_2 {
 		}
 
 		for (int i = 0; i < N; i++) {
-			if (vis[i] == false) {	// °°Àº ¼ıÀÚ´Â ³ª¿À¸é ¾ÈµÊ
+			if (vis[i] == false) {	// ê°™ì€ ìˆ«ìëŠ” ë‚˜ì˜¤ë©´ ì•ˆë¨
 				vis[i] = true;
 				arr[dep] = i + 1;
 				dfs(dep + 1);
-				// Àç±Í Å»Ãâ ÈÄ ¹æ¹® ÃÊ±âÈ­
+				// ì¬ê·€ íƒˆì¶œ í›„ ë°©ë¬¸ ì´ˆê¸°í™”
 				vis[i] = false;
 			}
 		}

@@ -4,16 +4,16 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// ¹éÆ®·¹Å·
+// ë°±íŠ¸ë ˆí‚¹
 
-public class BJ_15651_N°úM3 {
+public class BJ_15651_Nê³¼M3 {
 
 	public static int N, M;
 	public static int[] arr;;
 	public static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
-		BJ_15651_N°úM3 s = new BJ_15651_N°úM3();
+		BJ_15651_Nê³¼M3 s = new BJ_15651_Nê³¼M3();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -24,7 +24,7 @@ public class BJ_15651_N°úM3 {
 		arr = new int[M];
 
 		s.dfs(0);
-		
+
 		System.out.println(sb);
 	}
 

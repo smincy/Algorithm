@@ -3,7 +3,7 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BJ_2753_À±³â {
+public class BJ_2753_ìœ¤ë…„ {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub

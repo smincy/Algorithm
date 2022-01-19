@@ -3,9 +3,9 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// ¹éÆ®·¹Å·
+// ë°±íŠ¸ë ˆí‚¹
 
-public class BJ_15652_N°úM4 {
+public class BJ_15652_Nê³¼M4 {
 
 	public static int N, M;
 	public static StringBuilder sb = new StringBuilder();
@@ -13,7 +13,7 @@ public class BJ_15652_N°úM4 {
 
 	public static void main(String[] args) throws Exception {
 
-		BJ_15652_N°úM4 s = new BJ_15652_N°úM4();
+		BJ_15652_Nê³¼M4 s = new BJ_15652_Nê³¼M4();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -43,6 +43,5 @@ public class BJ_15652_N°úM4 {
 			dfs(a, dep + 1);
 			a++;
 		}
-		
 	}
 }

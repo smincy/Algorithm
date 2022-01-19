@@ -3,21 +3,21 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// Àç±Í
+// ì¬ê·€
 
-public class BJ_11729_ÇÏ³ëÀÌÅ¾ {
+public class BJ_11729_í•˜ë…¸ì´íƒ‘{
 
 	public static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
 
-		BJ_11729_ÇÏ³ëÀÌÅ¾ s = new BJ_11729_ÇÏ³ëÀÌÅ¾();
+		BJ_11729_í•˜ë…¸ì´íƒ‘ s = new BJ_11729_í•˜ë…¸ì´íƒ‘();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int N = Integer.parseInt(br.readLine());
 
-		sb.append((int) (Math.pow(2, N) - 1)).append("\n");	// Çüº¯È¯ ÁÖÀÇ
+		sb.append((int) (Math.pow(2, N) - 1)).append("\n");	// í˜•ë³€í™˜ ì£¼ì˜
 		
 		s.Hano(N, 1, 2, 3);
 
@@ -26,19 +26,19 @@ public class BJ_11729_ÇÏ³ëÀÌÅ¾ {
 	}
 
 	public void Hano(int N, int start, int mid, int to) {
-		// ¿Å°Ü¾ß µÇ´Â Å¾ÀÌ 1°³ ÀÎ °æ¿ì
+		// ì˜®ê²¨ì•¼ ë˜ëŠ” íƒ‘ì´ 1ê°œ ì¸ ê²½ìš°
 		if (N == 1) {
 			sb.append(start + " " + to + "\n");
 			return;
 		}
 
-		// N-1°³¸¦ 1¹øÆÇ¿¡¼­ 2¹øÆÇÀ¸·Î ÀÌµ¿
+		// N-1ê°œë¥¼ 1ë²ˆíŒì—ì„œ 2ë²ˆíŒìœ¼ë¡œ ì´ë™
 		Hano(N - 1, start, to, mid);
 
-		// 1¹øÆÇ °¡Àå ¾Æ·¡Å¾À» 3¹øÆÇÀ¸·Î ÀÌµ¿ (È½¼ö 1¹ø ÀÌ¹Ç·Î)
+		// 1ë²ˆíŒ ê°€ì¥ ì•„ë˜íƒ‘ì„ 3ë²ˆíŒìœ¼ë¡œ ì´ë™ (íšŸìˆ˜ 1ë²ˆ ì´ë¯€ë¡œ)
 		sb.append(start + " " + to + "\n");
 
-		// N-1°³¸¦ 2¹øÆÇ¿¡¼­ 3¹øÆÇÀ¸·Î ÀÌµ¿
+		// N-1ê°œë¥¼ 2ë²ˆíŒì—ì„œ 3ë²ˆíŒìœ¼ë¡œ ì´ë™
 		Hano(N - 1, mid, start, to);
 	}
 }

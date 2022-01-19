@@ -3,11 +3,11 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// ºê·çÆ®Æ÷½º ¾Ë°í¸®Áò
+//ë¸Œë£¨íŠ¸í¬ìŠ¤ ì•Œê³ ë¦¬ì¦˜
 
-// 1 ~ 10000 ±îÁö ÇÏ³ªÇÏ³ª °Ë»ç¸¦ ÇÏ¸é¼­ 666À» Æ÷ÇÔÇÏ´Â ¼ıÀÚ¸¦ Ä«¿îÆ®
-// Ã£´Â ¼ø¼­ÀÇ Ä«¿îÆ®¿Í °°À»¶§ °Ë»çÇÑ ¼ıÀÚ¸¦ Ãâ·Â
-public class BJ_1436_¿µÈ­°¨µ¶¼ò {
+//1 ~ 10000 ê¹Œì§€ í•˜ë‚˜í•˜ë‚˜ ê²€ì‚¬ë¥¼ í•˜ë©´ì„œ 666ì„ í¬í•¨í•˜ëŠ” ìˆ«ìë¥¼ ì¹´ìš´íŠ¸
+//ì°¾ëŠ” ìˆœì„œì˜ ì¹´ìš´íŠ¸ì™€ ê°™ì„ë•Œ ê²€ì‚¬í•œ ìˆ«ìë¥¼ ì¶œë ¥
+public class BJ_1436_ì˜í™”ê°ë…ìˆŒ {
 
 	public static void main(String[] args) throws Exception {
 
@@ -15,7 +15,7 @@ public class BJ_1436_¿µÈ­°¨µ¶¼ò {
 
 		int N = Integer.parseInt(br.readLine());
 
-		// Ã¹¹øÂ° Á¾¸»ÀÇ¼ıÀÚ 666 / 1
+		// ì²«ë²ˆì§¸ ì¢…ë§ì˜ìˆ«ì 666 / 1
 		int num = 666;
 		int cnt = 1;
 

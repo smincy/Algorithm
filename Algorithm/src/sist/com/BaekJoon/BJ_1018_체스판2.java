@@ -3,7 +3,7 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BJ_1018_Ã¼½ºÆÇ2 {
+public class BJ_1018_ì²´ìŠ¤íŒ2 {
 
 	public static boolean arr[][];
 
@@ -11,7 +11,7 @@ public class BJ_1018_Ã¼½ºÆÇ2 {
 
 	public static void main(String[] args) throws Exception {
 
-		BJ_1018_Ã¼½ºÆÇ2 s = new BJ_1018_Ã¼½ºÆÇ2();
+		BJ_1018_ì²´ìŠ¤íŒ2 s = new BJ_1018_ì²´ìŠ¤íŒ2();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -48,7 +48,7 @@ public class BJ_1018_Ã¼½ºÆÇ2 {
 		int endx = x + 8;
 		int endy = y + 8;
 
-		int cnt = 0; // Ä¥ÇÏ´Â È½¼ö
+		int cnt = 0; // Ä¥ï¿½Ï´ï¿½ È½ï¿½ï¿½
 
 		boolean st = arr[x][y];
 

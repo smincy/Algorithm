@@ -3,7 +3,7 @@ package sist.com.BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BJ_11047_µ¿Àü {
+public class BJ_11047_ë™ì „ {
 
 	public static int N, K, cnt;
 	public static int[] arr;

@@ -6,13 +6,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ_1932_Á¤¼ö»ï°¢Çü {
+public class BJ_1932_ì •ìˆ˜ì‚¼ê°í˜• {
 	public static int N;
 	public static int[][] arr;
 	public static int[][] dp;
 
 	public static void main(String[] args) throws Exception {
-		BJ_1932_Á¤¼ö»ï°¢Çü s = new BJ_1932_Á¤¼ö»ï°¢Çü();
+		BJ_1932_ì •ìˆ˜ì‚¼ê°í˜• s = new BJ_1932_ì •ìˆ˜ì‚¼ê°í˜•();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -38,17 +38,17 @@ public class BJ_1932_Á¤¼ö»ï°¢Çü {
 
 	}
 
-	public int sam(int h, int y) { // Çà/¿­ À» ÀÔ·Â
+	public int sam(int h, int y) { // í–‰/ì—´ ì„ ì…ë ¥
 		if (h == N - 1) {
-			// ¸¶Áö¸· ÇàÀ» ¸¸³ª¸é ±× °ªÀ» ¹İÈ¯
+			// ë§ˆì§€ë§‰ í–‰ì„ ë§Œë‚˜ë©´ ê·¸ ê°’ì„ ë°˜í™˜
 			return dp[h][y];
 		}
 
-		if (dp[h][y] == -1) { // Ã£´Â °÷ÀÌ ºó°÷ÀÌ¸é ´ÙÀ½ Çà,¿­ÀÇ ÁÂ/¿ì °ªÀ¸·Î Àç±Í
-			// ´ÙÀ½ À§Ä¡ÀÇ ÁÂ/¿ì °ªÁß Å«°©°ú ÇØ´çÀ§Ä¡ arr °ª°ú ´õÇØ¼­ ÀúÀå
+		if (dp[h][y] == -1) { // ì°¾ëŠ” ê³³ì´ ë¹ˆê³³ì´ë©´ ë‹¤ìŒ í–‰,ì—´ì˜ ì¢Œ/ìš° ê°’ìœ¼ë¡œ ì¬ê·€
+			// ë‹¤ìŒ ìœ„ì¹˜ì˜ ì¢Œ/ìš° ê°’ì¤‘ í°ê°‘ê³¼ í•´ë‹¹ìœ„ì¹˜ arr ê°’ê³¼ ë”í•´ì„œ ì €ì¥
 			dp[h][y] = Math.max(sam(h + 1, y), sam(h + 1, y + 1)) + arr[h][y];
 		}
-		// ¸¶Áö¸·¿¡ °¡Àå Å«°ªÀÌ ÀúÀå µÇµµ·Ï ¸¸µé°í ±× °ªÀ» ¸®ÅÏ
+		// ë§ˆì§€ë§‰ì— ê°€ì¥ í°ê°’ì´ ì €ì¥ ë˜ë„ë¡ ë§Œë“¤ê³  ê·¸ ê°’ì„ ë¦¬í„´
 		return dp[h][y];
 	}
 }

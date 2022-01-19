@@ -1,16 +1,16 @@
 package sist.com.BaekJoon;
 
-// ´ÙÀÌ³ª¹Í ÇÁ·Î±×·¡¹Ö
-//1¹øÁıÀº 2¹øÁı°ú »öÀÌ ´Ş¶ó¾ßÇÑ´Ù, N¹ø(³¡Áı)Àº N-1(³¡ÀüÁı)Áı°ú »öÀÌ ´Ş¶ó¾ß ÇÑ´Ù
-//Áß°£¹üÀ§¿¡¼­´Â À§¾Æ·¡ Áı°ú »öÀÌ ´Ş¶ó¾ß ÇÑ
+//ë‹¤ì´ë‚˜ë¯¹ í”„ë¡œê·¸ë˜ë°
+//1ë²ˆì§‘ì€ 2ë²ˆì§‘ê³¼ ìƒ‰ì´ ë‹¬ë¼ì•¼í•œë‹¤, Në²ˆ(ëì§‘)ì€ N-1(ëì „ì§‘)ì§‘ê³¼ ìƒ‰ì´ ë‹¬ë¼ì•¼ í•œë‹¤
+//ì¤‘ê°„ë²”ìœ„ì—ì„œëŠ” ìœ„ì•„ë˜ ì§‘ê³¼ ìƒ‰ì´ ë‹¬ë¼ì•¼ í•œ
 
-// for¹®À¸·Îµµ Ç®ÀÌ°¡´É
+//forë¬¸ìœ¼ë¡œë„ í’€ì´ê°€ëŠ¥
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ_1149_RGB°Å¸® {
+public class BJ_1149_RGBê±°ë¦¬ {
 
 	public static int N;
 	public static int[][] arr;
@@ -21,7 +21,7 @@ public class BJ_1149_RGB°Å¸® {
 	final static int blue = 2;
 
 	public static void main(String[] args) throws Exception {
-		BJ_1149_RGB°Å¸® s = new BJ_1149_RGB°Å¸®();
+		BJ_1149_RGBê±°ë¦¬ s = new BJ_1149_RGBê±°ë¦¬();
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -32,26 +32,26 @@ public class BJ_1149_RGB°Å¸® {
 
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			// ±İ¾× ÀÔ·Â
+			// ê¸ˆì•¡ ì…ë ¥
 			arr[i][red] = Integer.parseInt(st.nextToken());
 			arr[i][green] = Integer.parseInt(st.nextToken());
 			arr[i][blue] = Integer.parseInt(st.nextToken());
 		}
 
-		// dp Ã¹¹øÂ° Áı°ªÀº ºñ¿ë Ã¹¹øÂ° °ªÀ¸·Î ÃÊ±âÈ­
-		// (Ã¹¹øÂ°ÁıÀÌ °ğ ¸¶Áö¸·À¸·Î Å½»öÇÒ Áı, cost¿¡¼­ 0°ªÀ¸·Î ÀÎ½ÄµÇÁö ¾Êµµ·Ï)
+		// dp ì²«ë²ˆì§¸ ì§‘ê°’ì€ ë¹„ìš© ì²«ë²ˆì§¸ ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
+		// (ì²«ë²ˆì§¸ì§‘ì´ ê³§ ë§ˆì§€ë§‰ìœ¼ë¡œ íƒìƒ‰í•  ì§‘, costì—ì„œ 0ê°’ìœ¼ë¡œ ì¸ì‹ë˜ì§€ ì•Šë„ë¡)
 		dp[0][red] = arr[0][red];
 		dp[0][green] = arr[0][green];
 		dp[0][blue] = arr[0][blue];
 		
-		// ¼Â Áß¿¡ ÀÛÀº°ª Ã£±â
+		// ì…‹ ì¤‘ì— ì‘ì€ê°’ ì°¾ê¸°
 		int tmp = Math.min(s.cost(N - 1, red), Math.min(s.cost(N - 1, green), s.cost(N - 1, blue)));
 		System.out.println(tmp);
 	}
 
 	public int cost(int N, int color) {
-		// ÀÔ·ÂÇÑ ÁıÀÌ ÇÑ¹øµµ Å½»öÇÏÁö ¾ÊÀº ÁıÀÌ¶ó¸é
-		// N¹øÂ° Áı ÄÃ·¯»ö¿¡ µû¶ó ÀÌÀüÁıÀÇ ÄÃ·¯±İ¾× Áß ÀÛÀº °ªÀ» Ã£¾Æ¼­ ´õÇÑ °ªÀ» dp¿¡ ÀúÀå
+		// ì…ë ¥í•œ ì§‘ì´ í•œë²ˆë„ íƒìƒ‰í•˜ì§€ ì•Šì€ ì§‘ì´ë¼ë©´
+		// Në²ˆì§¸ ì§‘ ì»¬ëŸ¬ìƒ‰ì— ë”°ë¼ ì´ì „ì§‘ì˜ ì»¬ëŸ¬ê¸ˆì•¡ ì¤‘ ì‘ì€ ê°’ì„ ì°¾ì•„ì„œ ë”í•œ ê°’ì„ dpì— ì €ì¥
 		if (dp[N][color] == 0) {
 			if (color == red) {
 				dp[N][red] = Math.min(cost(N - 1, green), cost(N - 1, blue)) + arr[N][red];
@@ -60,7 +60,7 @@ public class BJ_1149_RGB°Å¸® {
 			} else {
 				dp[N][blue] = Math.min(cost(N - 1, green), cost(N - 1, red)) + arr[N][blue];
 			}
-		}		// ÄÃ·¯¿¡ ÀÛÀº°ªÀ» ´õÇØ¼­ ³Ö¾îÁÖ°í ´õÇØ¼­ ³Ö¾îÁÖ°í ³¡³ª¸é ¹İÈ¯
+		}		// ì»¬ëŸ¬ì— ì‘ì€ê°’ì„ ë”í•´ì„œ ë„£ì–´ì£¼ê³  ë”í•´ì„œ ë„£ì–´ì£¼ê³  ëë‚˜ë©´ ë°˜í™˜
 		return dp[N][color];
 	}
 }
