@@ -1,4 +1,4 @@
-package sist.com.BaekJoon;
+package Algorithm.src.sist.com.BaekJoon;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
