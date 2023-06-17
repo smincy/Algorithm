@@ -2,7 +2,6 @@ package Algorithm.src.sist.com.BaekJoon;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
 import java.util.StringTokenizer;
 
 public class BJ_2435_기상청인신현수 {
