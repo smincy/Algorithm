@@ -24,7 +24,7 @@ public class BJ_12780_원피스 {
     }
 
     public static void strCheck(int a) {
-        if (a + target.length() <= str.length() && str.substring(a, a + target.length()).equals(target)) {
+        if (a + target.length() <= str.length() && str.startsWith(target, a)) {
             cnt++;
         }
     }
